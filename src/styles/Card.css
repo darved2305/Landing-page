@@ -1,0 +1,81 @@
+/* Card grid and card design for parchment look with visible symbol background */
+
+.card {
+  background: none;
+  border-radius: 64px;
+  padding: 32px 28px 28px 28px;
+  box-shadow: 0 6px 32px rgba(0,0,0,.35), 0 1.5px 0 #d6b48a inset;
+  border: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('/parchment-bg.png') center/cover no-repeat, #e2c7a2;
+  border-radius: 64px;
+  pointer-events: none;
+}
+
+.card[class*="card--"]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.55;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% auto;
+  pointer-events: none;
+}
+.card--simha::before { background-image: url('/simha.png'); }
+.card--vasuki::before { background-image: url('/vasuki.png'); }
+.card--airavat::before { background-image: url('/airavat.png'); }
+.card--garuda::before { background-image: url('/garuda.png'); }
+.card--devdutta::before { background-image: url('/devdutta.png'); }
+.card--mayura::before { background-image: url('/mayura.png'); }
+
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card__title {
+  font-family: 'Jaini', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b2e0e;
+  margin-bottom: 18px;
+  margin-top: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 1.5px 0 #f3e7d8;
+}
+
+.card__text {
+  color: #3a2712;
+  font-family: 'Kokila', serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px 36px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 0 0 0;
+}
