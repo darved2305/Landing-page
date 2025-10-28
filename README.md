@@ -1,4 +1,4 @@
-# Trinity Festival (React + Vite)
+(React + Vite)
 
 ## Run locally
 ```bash
