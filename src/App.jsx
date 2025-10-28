@@ -50,7 +50,20 @@ export default function App() {
         </div>
       </section>
 
-    
+      <section className="about">
+        <div className="about__heading">About Us</div>
+        <div className="about__card">
+          <p>
+            Trinity embodies the spirit of D.J. Sanghvi as the most anticipated and
+            cherished annual socio‑cultural, sports, and technical festival. Trinity is a
+            coalescence of innovation and technology, festivities and social
+            responsibilities, and the competitive streak of sports. The grandeur of
+            Trinity is sure to attract students not only from Mumbai but from colleges all
+            around the world.
+          </p>
+        </div>
+      </section>
+      
     </div>
   );
 }
