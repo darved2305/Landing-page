@@ -33,7 +33,7 @@
 }
 .card--simha::before { background-image: url('/simha.png'); }
 .card--vasuki::before { background-image: url('/vasuki.png'); }
-.card--airavat::before { background-image: url('/airavat.png'); }
+
 .card--garuda::before { background-image: url('/garuda.png'); }
 .card--devdutta::before { background-image: url('/devdutta.png'); }
 .card--mayura::before { background-image: url('/mayura.png'); }
